@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CaseReport">
+    <Key>
+      <PropertyRef Name="CaseReportID" />
+    </Key>
+    <Property Name="CaseReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserInformationID" Type="Int32" Nullable="false" />
+    <Property Name="DateReported" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CaseReportPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CaseLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnvironmentalConcernID" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedStatusID" Type="Int32" Nullable="false" />
+    <Property Name="UpdatedStatusDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="VolunteerID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="TeraEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CaseReports" EntityType="Self.CaseReport" />
+  </EntityContainer>
+</Schema>

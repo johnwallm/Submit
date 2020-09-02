@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TeraModelStoreContainer" CdmEntityContainer="TeraEntities">
+    <EntitySetMapping Name="CaseReports">
+      <EntityTypeMapping TypeName="TeraModel.CaseReport">
+        <MappingFragment StoreEntitySet="CaseReport">
+          <ScalarProperty Name="CaseReportID" ColumnName="CaseReportID" />
+          <ScalarProperty Name="UserInformationID" ColumnName="UserInformationID" />
+          <ScalarProperty Name="DateReported" ColumnName="DateReported" />
+          <ScalarProperty Name="CaseReportPhoto" ColumnName="CaseReportPhoto" />
+          <ScalarProperty Name="CaseLocation" ColumnName="CaseLocation" />
+          <ScalarProperty Name="EnvironmentalConcernID" ColumnName="EnvironmentalConcernID" />
+          <ScalarProperty Name="UpdatedStatusID" ColumnName="UpdatedStatusID" />
+          <ScalarProperty Name="UpdatedStatusDate" ColumnName="UpdatedStatusDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="VolunteerID" ColumnName="VolunteerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
