@@ -11,13 +11,13 @@ namespace Submit.Controllers
     {
 
         private TeraEntities db = new TeraEntities();
-        //for image saving
+        //FOR GETTING THE IMAGE OR FOR PROMPTING THE PAGE WITH CHOOSE FILE
         public ActionResult AddImage()
         {
             CaseReport c1 = new CaseReport();
             return View(c1);
         }
-        //for image saving
+        //FOR GETTING THE IMAGE OR FOR PROMPTING THE PAGE WITH CHOOSE FILE
         [HttpPost]
         public ActionResult AddImage(CaseReport model, HttpPostedFileBase image1)
         {
@@ -33,7 +33,7 @@ namespace Submit.Controllers
             return View(model);
         }
 
-        //for image retrieving
+        //for image retrieving OR SHOWING
         public ActionResult GetImage()
         {
             return View(db.CaseReports.ToList());

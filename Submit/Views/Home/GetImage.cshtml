@@ -39,41 +39,44 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserInformationID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateReported)
-        </td>
-        <td>
-            @{
-                var base64 = Convert.ToBase64String(item.CaseReportPhoto);
-                var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
-            }
-            <img src='@imgsrc' style="max-width:500px;max-height:150px" />
-            
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CaseLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnvironmentalConcernID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedStatusID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UpdatedStatusDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Notes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VolunteerID)
-        </td>
-       
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserInformationID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateReported)
+    </td>
+    <!---->
+    <!--FOR SHOWING THE IMAGE IN PAGE-->
+    <!---->
+    <td>
+        @{
+            var base64 = Convert.ToBase64String(item.CaseReportPhoto);
+            var imgsrc = string.Format("data:image/gif;base64,{0}", base64);
+        }
+        <img src='@imgsrc' style="max-width:500px;max-height:150px" />
+
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CaseLocation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EnvironmentalConcernID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UpdatedStatusID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UpdatedStatusDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Notes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VolunteerID)
+    </td>
+
+</tr>
 }
 <td>
     @Html.ActionLink("Create New", "AddImage")
